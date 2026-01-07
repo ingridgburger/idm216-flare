@@ -1,0 +1,93 @@
+/* FONT */
+@font-face {
+	font-display: swap;
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url('fonts/dm-sans-variable.ttf') format('truetype');
+}
+
+/* GENERAL */
+:root {
+	--white: #f6f5f0;
+    --black: #1a1a1a;
+    --orange: #e47448;
+
+	--background-color: var(--white);
+	--foreground-color: var(--black);
+    --highlight-color: var(--orange);
+
+	--font-sans-serif: 'DM Sans', Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+  body {
+    margin: 0;
+    font-family: var(--font-sans-serif);
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+  }
+  
+/* HEADER */  
+  .site-header {
+    text-align: center;
+    padding: 64px 24px 48px;
+  }
+  
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+  
+  /* MAIN */
+  .team {
+    padding: 48px 24px 72px;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-photo {
+    background-color: var(--highlight-color);
+    border-radius: 500px;
+    margin-bottom: 16px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .team-name {
+    font-weight: 600;
+    margin: 0 0 6px;
+  }
+  
+  .team-role {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+  
