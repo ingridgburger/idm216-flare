@@ -7,87 +7,160 @@
 	src: url('fonts/dm-sans-variable.ttf') format('truetype');
 }
 
+@font-face {
+	font-display: swap;
+	font-family: 'Boldonse';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url('fonts/Boldonse-Regular.ttf') format('truetype');
+}
+
 /* GENERAL */
 :root {
 	--white: #f6f5f0;
-    --black: #1a1a1a;
-    --orange: #e47448;
+  --off-white: #e7e4d8;
+  --black: #1a1a1a;
+  --orange: #e47448;
 
 	--background-color: var(--white);
 	--foreground-color: var(--black);
-    --highlight-color: var(--orange);
+  --highlight-color: var(--orange);
+  --muted-color: var(--off-white);
 
 	--font-sans-serif: 'DM Sans', Helvetica, Arial, sans-serif;
+  --font-bold: 'Boldonse', Helvetica, Arial, sans-serif;
 }
 
 * {
     box-sizing: border-box;
 }
   
-  body {
-    margin: 0;
-    font-family: var(--font-sans-serif);
-    color: var(--foreground-color);
-    background-color: var(--background-color);
-  }
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  margin: 0;
+}
+
+/* HEADER */ 
+header {
+  font-family: var(--font-bold);
+  padding: 64px 24px 48px;
+  text-align: center;
+} 
   
-/* HEADER */  
-  .site-header {
-    text-align: center;
-    padding: 64px 24px 48px;
-  }
-  
-  .logo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
-  }
-  
-  .logo span {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  
-  .tagline {
-    font-size: 1.1rem;
-    letter-spacing: 0.02em;
-    margin: 0;
-  }
-  
-  /* MAIN */
-  .team {
-    padding: 48px 24px 72px;
-  }
-  
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px;
-    margin: 0 auto;
-    max-width: 1200px;
-  }
-  
-  .team-member {
-    text-align: center;
-  }
-  
-  .team-photo {
-    background-color: var(--highlight-color);
-    border-radius: 500px;
-    margin-bottom: 16px;
-    object-fit: cover;
-    width: 100%;
-  }
-  
-  .team-name {
-    font-weight: 600;
-    margin: 0 0 6px;
-  }
-  
-  .team-role {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    margin: 0;
+.logo {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 16px;
 }
   
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo-image {
+  max-width: 300px;
+}
+  
+.tagline {
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+  
+/* MAIN */
+main {
+  font-family: var(--font-sans-serif);
+  height: 90vh;
+}
+
+.team {
+  padding: 48px 24px 48px;
+}
+  
+.team-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 0 auto;
+  max-width: 1200px;
+}
+  
+.team-member {
+  text-align: center;
+  transition: transform 180ms ease;
+}
+  
+.team-member:hover {
+  transform: translateY(-4px);
+}
+  
+.team-photo {
+  background-color: var(--muted-color);
+  border-radius: 500px;
+  display: block;
+  margin-bottom: 16px;
+  object-fit: cover;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  width: 100%;
+}
+
+.team-member:hover .team-photo {
+  background-color: var(--highlight-color);
+  box-shadow: 0 12px 28px rgba(26, 26, 26, 0.18);
+  transform: scale(1.04);
+}
+
+  
+.team-name {
+  font-family: var(--font-bold);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  transition: transform 180ms ease, letter-spacing 180ms ease;
+}
+  
+.team-member:hover .team-name {
+  letter-spacing: 0.1em;
+  transform: translateY(-1px);
+}
+  
+.team-role {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  transition: font-weight 180ms ease;
+}
+
+.team-role + .team-role {
+  margin-top: 4px;
+}
+  
+.team-member:hover .team-role {
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--foreground-color);
+  padding: 28px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
