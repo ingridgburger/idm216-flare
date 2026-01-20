@@ -145,7 +145,7 @@ main {
 }
 
 a.team-contact {
-  color: gray;
+  color: var(--foreground-color);
   font-size: 0.85rem;
   line-height: 2.5rem;
   transition: color 180ms ease;
