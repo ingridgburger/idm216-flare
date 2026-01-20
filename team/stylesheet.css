@@ -91,11 +91,6 @@ main {
   
 .team-member {
   text-align: center;
-  transition: transform 180ms ease;
-}
-  
-.team-member:hover {
-  transform: translateY(-4px);
 }
   
 .team-photo {
