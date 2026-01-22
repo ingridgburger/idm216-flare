@@ -16,6 +16,110 @@
 	--font-sans-serif: 'Futura', Helvetica, Arial, sans-serif;
 }
 
+/* USER PERSONA SECTION */
+.personas-section {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 90px;
+}
+
+.personas-section h1 {
+    text-align: center;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.personas-section p {
+    text-align: center;
+    margin: 0;
+    line-height: 1.3;
+    font-size: 1rem;
+    color: var(--foreground-color);
+    margin-bottom: 20px;
+}
+
+.personas-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: var(--off-white);
+    border-radius: 10px;
+    padding: 25px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card-link:hover .user-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.user-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 0px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    background-color: var(--highlight-1);
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.user-card-link:hover .user-image {
+    background-color: var(--highlight-2);
+    transform: scale(1.02);
+}
+
+.user-name {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.user-info {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.user-needs {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .personas-section {
+        gap: 25px;
+        padding: 40px 10px;
+    }
+
+    .user-card {
+        width: 200px;
+        padding: 20px;
+    }
+
+    .user-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 /* APP FLOW (CRITICAL PATH) SECTION */
 .app-flow-section {
     max-width: 100%;
