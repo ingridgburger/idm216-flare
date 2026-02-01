@@ -1,5 +1,5 @@
 <?php
-    $category_data = mysqli_query($connection, "SELECT * FROM menu_categories");
+    $category_data = mysqli_query($connection, "SELECT * FROM idm216_menu_categories");
     $category = mysqli_fetch_all($category_data, MYSQLI_ASSOC);
 ?>
 

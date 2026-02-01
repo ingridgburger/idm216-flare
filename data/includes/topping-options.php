@@ -1,5 +1,5 @@
 <?php
-    $topping_data = mysqli_query($connection, "SELECT * FROM topping_options");
+    $topping_data = mysqli_query($connection, "SELECT * FROM idm216_topping_options");
     $topping = mysqli_fetch_all($topping_data, MYSQLI_ASSOC);
 ?>
 

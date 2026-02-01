@@ -1,5 +1,5 @@
 <?php
-    $cheese_data = mysqli_query($connection, "SELECT * FROM cheese_options");
+    $cheese_data = mysqli_query($connection, "SELECT * FROM idm216_cheese_options");
     $cheese = mysqli_fetch_all($cheese_data, MYSQLI_ASSOC);
 ?>
 

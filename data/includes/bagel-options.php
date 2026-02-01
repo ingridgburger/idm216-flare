@@ -1,5 +1,5 @@
 <?php
-    $bagel_data = mysqli_query($connection, "SELECT * FROM bagel_options");
+    $bagel_data = mysqli_query($connection, "SELECT * FROM idm216_bagel_options");
     $bagel = mysqli_fetch_all($bagel_data, MYSQLI_ASSOC);
 ?>
 

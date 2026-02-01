@@ -1,5 +1,5 @@
 <?php
-    $dressing_data = mysqli_query($connection, "SELECT * FROM dressing_options");
+    $dressing_data = mysqli_query($connection, "SELECT * FROM idm216_dressing_options");
     $dressing = mysqli_fetch_all($dressing_data, MYSQLI_ASSOC);
 ?>
 

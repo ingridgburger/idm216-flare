@@ -1,5 +1,5 @@
 <?php
-    $menu_data = mysqli_query($connection, "SELECT * FROM menu_items");
+    $menu_data = mysqli_query($connection, "SELECT * FROM idm216_menu_items");
     $menu_item = mysqli_fetch_all($menu_data, MYSQLI_ASSOC);
 ?>
 

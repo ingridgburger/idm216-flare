@@ -1,5 +1,5 @@
 <?php
-    $size_data = mysqli_query($connection, "SELECT * FROM size_options");
+    $size_data = mysqli_query($connection, "SELECT * FROM idm216_size_options");
     $size = mysqli_fetch_all($size_data, MYSQLI_ASSOC);
 ?>
 
