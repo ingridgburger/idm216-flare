@@ -6,7 +6,7 @@
 <article class="content">
     <table>
         <thead>
-            <tr><th id="menu-items-heading" colspan="14" class="table-heading">MENU ITEMS</th></tr>
+            <tr><th id="menu-items-heading" colspan="14" class="table-heading">Menu Items</th></tr>
             <tr class="table-column-headings">
                 <th id="id">ID</th>
                 <th id="category-id">Category ID</th>

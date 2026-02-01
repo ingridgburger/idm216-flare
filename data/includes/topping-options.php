@@ -6,7 +6,7 @@
 <article class="content">
     <table>
         <thead>
-            <tr><th id="topping-heading" colspan="8" class="table-heading">TOPPING OPTIONS</th></tr>
+            <tr><th id="topping-heading" colspan="8" class="table-heading">Topping Options</th></tr>
             <tr class="table-column-headings">
                 <th id="id">ID</th>
                 <th id="topping-type">Topping Type</th>

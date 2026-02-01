@@ -6,7 +6,7 @@
 <article class="content">
     <table>
         <thead>
-            <tr><th id="size-heading" colspan="8" class="table-heading">SIZE OPTIONS</th></tr>
+            <tr><th id="size-heading" colspan="8" class="table-heading">Size Options</th></tr>
             <tr class="table-column-headings">
                 <th id="id">ID</th>
                 <th id="size-type">Size Type</th>

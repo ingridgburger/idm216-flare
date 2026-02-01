@@ -6,7 +6,7 @@
 <article class="content">
     <table>
         <thead>
-            <tr><th id="bread-heading" colspan="8" class="table-heading">BREAD OPTION</th></tr>
+            <tr><th id="bread-heading" colspan="8" class="table-heading">Bread Options</th></tr>
             <tr class="table-column-headings">
                 <th id="id">ID</th>
                 <th id="bread-type">Bread Type</th>

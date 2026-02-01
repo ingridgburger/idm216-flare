@@ -15,16 +15,20 @@
     <?php require_once 'includes/header.php';?>
 
     <main>
-        <?php include 'includes/menu-items.php'; ?>
-        <?php include 'includes/menu-categories.php'; ?>
-        <?php include 'includes/bagel-options.php'; ?>
-        <?php include 'includes/bread-options.php'; ?>
-        <?php include 'includes/cheese-options.php'; ?>
-        <?php include 'includes/topping-options.php'; ?>
-        <?php include 'includes/dressing-options.php'; ?>
-        <?php include 'includes/size-options.php'; ?>
+        <section class="hero">
+            <img src="../images/petes-logos/petes-logo.svg" alt="Pete's Little Lunch Box Logo" class="petes-logo">
+            <h1 class="page-title">Database Dump</h1>
+        </section>
+        <section id="menu-categories"><?php include 'includes/menu-categories.php'; ?></section>
+        <section id="menu-items"><?php include 'includes/menu-items.php'; ?></section>
+        <section id="bagel"><?php include 'includes/bagel-options.php'; ?></section>
+        <section id="bread"><?php include 'includes/bread-options.php'; ?></section>
+        <section id="cheese"><?php include 'includes/cheese-options.php'; ?></section>
+        <section id="toppings"><?php include 'includes/topping-options.php'; ?></section>
+        <section id="dressing"><?php include 'includes/dressing-options.php'; ?></section>
+        <section id="size"><?php include 'includes/size-options.php'; ?></section>
     </main>
-    <a href="#top" class="back-to-top-btn">BACK TO TOP?</a>
+    <a href="#top" class="back-to-top-btn">Back to Top?</a>
     
     <footer class="site-footer">
         <img src="../images/flare-logos/flare-logo-light.svg" alt="Flare Logo">

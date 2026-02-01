@@ -6,7 +6,7 @@
 <article class="content">
     <table>
         <thead>
-            <tr><th id="bagel-heading" colspan="8" class="table-heading">BAGEL OPTIONS</th></tr>
+            <tr><th id="bagel-heading" colspan="8" class="table-heading">Bagel Options</th></tr>
             <tr class="table-column-headings">
                 <th id="id">ID</th>
                 <th id="bagel-type">Bagel Type</th>

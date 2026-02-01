@@ -6,7 +6,7 @@
 <article class="content">
     <table>
         <thead>
-            <tr><th id="cheese-heading" colspan="8" class="table-heading">CHEESE OPTIONS</th></tr>
+            <tr><th id="cheese-heading" colspan="8" class="table-heading">Cheese Options</th></tr>
             <tr class="table-column-headings">
                 <th id="id">ID</th>
                 <th id="cheese-type">Cheese Type</th>
