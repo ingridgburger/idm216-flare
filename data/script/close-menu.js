@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('nav .nav-menu a');
   if (!navToggle) return;
 
-  function closeMenu(e) {
+  function closeMenu() {
     if (navToggle.checked) {
       navToggle.checked = false;
     }
