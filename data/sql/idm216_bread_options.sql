@@ -47,7 +47,7 @@ INSERT INTO `idm216_bread_options` (`id`, `bread_type`, `extra_charge`, `calorie
 (5, 'Wrap', 0.00, 260, 'wrap.webp'),
 (6, 'Pita', 0.00, 200, 'pita.webp'),
 (7, 'Bagel', 0.00, 280, 'plain_bagel.webp'),
-(8, 'Crossaint', 0.00, 340, 'crossaint.webp');
+(8, 'Croissant', 0.00, 340, 'croissant.webp');
 
 --
 -- Indexes for dumped tables
