@@ -34,5 +34,7 @@
         <img src="../images/flare-logos/flare-logo-light.svg" alt="Flare Logo">
     </footer>
     <?php require_once 'includes/close-db.php'; ?>
+    <script src="../data/script/close-menu.js"></script>
+    <script src="../data/script/table-pagination.js"></script>
 </body>
 </html>
