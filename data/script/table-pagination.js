@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!pagination || !pagination.classList.contains('pagination')) {
       pagination = document.createElement('div');
       pagination.className = 'pagination';
-      table.parentNode.insertBefore(pagination, table.nextSibling);
+      table.parentNode.appendChild(pagination);
     }
     pagination.innerHTML = '';
     for (let i = 1; i <= pageCount; i++) {
