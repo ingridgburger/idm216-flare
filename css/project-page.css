@@ -3,7 +3,7 @@
     --off-white: #f8f5f1;
     --light-gray: #EEEEEE;
     --gray: #818181;
-    --black: #363232;
+    --black: #1A1A1A;
     --blue: #143A9B;
     --red: #F7564E;
 
@@ -12,8 +12,8 @@
     --highlight-1: var(--red);
     --highlight-2: var(--blue);
 
-    --font-bold: 'Eldwin', Helvetica, Arial, sans-serif;
-	--font-sans-serif: 'Futura', Helvetica, Arial, sans-serif;
+    --font-bold: 'eldwin-script', Helvetica, Arial, sans-serif;
+	--font-sans-serif: 'futura-pt', Helvetica, Arial, sans-serif;
 }
 
 /* PROJECT HERO */
@@ -78,6 +78,7 @@
     width: 280px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    cursor: pointer;
 }
 
 .user-card-link {
