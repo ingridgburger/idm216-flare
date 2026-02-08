@@ -12,8 +12,8 @@
     --highlight-1: var(--red);
     --highlight-2: var(--blue);
 
-    --font-bold: 'Eldwin', Helvetica, Arial, sans-serif;
-	--font-sans-serif: 'Futura', Helvetica, Arial, sans-serif;
+    --font-bold: 'eldwin-script', Helvetica, Arial, sans-serif;
+	--font-sans-serif: 'futura-pt', Helvetica, Arial, sans-serif;
 }
 
 /* PROJECT HERO */
