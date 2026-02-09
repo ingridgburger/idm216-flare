@@ -1,18 +1,5 @@
 
 <?php
-$connection = mysqli_connect(
-    'localhost',
-    'root',
-    'root',
-    'sej84_db',
-    8889
-);
-
-if (!$connection) {
-    die('Database connection failed: ' . mysqli_connect_error());
-}
-
-/*
 $env_vars = [
     'DB_SERVER'   => $_SERVER['REDIRECT_DB_SERVER']   ?? $_SERVER['DB_SERVER']   ?? null,
     'DB_USERNAME' => $_SERVER['REDIRECT_DB_USERNAME'] ?? $_SERVER['DB_USERNAME'] ?? null,
@@ -35,4 +22,3 @@ $connection = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 if ($connection->connect_error){
     die("Connection failed: " . $connection->connect_error);
 }
-*/
