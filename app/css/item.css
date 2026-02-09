@@ -120,8 +120,10 @@
 .add-bar {
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
+  max-width: 393px;
   background: var(--background-color);
   padding: 16px;
   display: flex;

@@ -274,8 +274,10 @@
 /* TOAST BANNER */
 .add-toast {
   position: fixed;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 393px;
   bottom: 88px;
   background: var(--highlight-1);
   color: var(--white);
@@ -288,8 +290,6 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   z-index: 1000;
-  width: 90%;
-  margin: 0 auto;
 }
 
 .toast-text {
