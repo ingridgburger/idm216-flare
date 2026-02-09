@@ -13,7 +13,6 @@ $result = mysqli_query($connection, $query);
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/components.css">
         <link rel="stylesheet" href="css/home.css">
-        <link rel="stylesheet" href="css/home-carousel.css">
 </head>
 
 <body>
@@ -119,7 +118,7 @@ $result = mysqli_query($connection, $query);
     </section>
 
     <div class="divider">
-        <img src="app-images/star.svg" alt="" class="divider-star-img">
+        <img src="app-images/misc/star.svg" alt="" class="divider-star-img">
     </div>
 
     <section class="categories">
