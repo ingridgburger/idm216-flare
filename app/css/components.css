@@ -1,24 +1,21 @@
 /* HEADER */
 .app-header {
   display: grid;
-  grid-template-columns: 48px 1fr 48px;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 20px;
+  padding-top: 16px;
   position: absolute;
   z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
-  margin-top: 16px;
-}
-
-.header--compact {
-  height: 56px;
 }
 
 .header--tall {
-  height: 260px;
-  align-items: flex-start;
+  grid-template-columns: 1fr;
+  position: relative;
+  height: 200px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -26,8 +23,20 @@
 .header--tall .header-title {
   align-self: flex-end;
   margin-bottom: 0;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   line-height: 1.1;
+}
+
+.petes-logo-header {
+  width: 100%;
+  text-align: center;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 /* background variants */
@@ -70,15 +79,8 @@
 
 /* header buttons*/
 .icon-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
+  all: unset;
+  color: var(--black);
   cursor: pointer;
 }
 
