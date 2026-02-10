@@ -142,10 +142,6 @@
         <img src="app-images/nav/order-<?= ($current_page == 'orders.php') ? 'active' : 'inactive' ?>.svg" alt="Orders">
         <span>Orders</span>
     </a>
-    <a href="rewards.php" class="<?= ($current_page == 'rewards.php') ? 'active' : '' ?>">
-        <img src="app-images/nav/rewards-<?= ($current_page == 'rewards.php') ? 'active' : 'inactive' ?>.svg" alt="Rewards">
-        <span>Rewards</span>
-    </a>
     <a href="account.php" class="<?= ($current_page == 'account.php') ? 'active' : '' ?>">
         <img src="app-images/nav/account-<?= ($current_page == 'account.php') ? 'active' : 'inactive' ?>.svg" alt="Account">
         <span>Account</span>

@@ -162,31 +162,6 @@
   color: var(--gray);
 }
 
-/* REWARDS SECTION */
-.rewards-section {
-  padding: 20px 20px;
-}
-
-.rewards-points {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.rewards-points h2 {
-  margin: 0;
-}
-
-.view-rewards-link {
-  font-family: var(--font-sans-serif);
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--highlight-2);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
 /* FAVORITES & BESTSELLERS */
 .favorites-section,
 .bestsellers-section {

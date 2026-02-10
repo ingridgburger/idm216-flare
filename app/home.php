@@ -54,13 +54,6 @@ $result = mysqli_query($connection, $query);
         <p class="wait-time">Current Wait: 11 minutes</p>
     </section>
 
-    <section class="rewards-section">
-        <div class="rewards-points">
-            <h2 class="script red-text">2,530 pts</h2>
-            <a href="rewards.php" class="view-rewards-link">View Rewards</a>
-        </div>
-    </section>
-
     <div class="divider">
         <img src="app-images/misc/star.svg" alt="" class="divider-star-img">
     </div>
@@ -150,10 +143,6 @@ $result = mysqli_query($connection, $query);
     <a href="orders.php" class="<?= ($current_page == 'orders.php') ? 'active' : '' ?>">
         <img src="app-images/nav/order-<?= ($current_page == 'orders.php') ? 'active' : 'inactive' ?>.svg" alt="Orders">
         <span>Orders</span>
-    </a>
-    <a href="rewards.php" class="<?= ($current_page == 'rewards.php') ? 'active' : '' ?>">
-        <img src="app-images/nav/rewards-<?= ($current_page == 'rewards.php') ? 'active' : 'inactive' ?>.svg" alt="Rewards">
-        <span>Rewards</span>
     </a>
     <a href="account.php" class="<?= ($current_page == 'account.php') ? 'active' : '' ?>">
         <img src="app-images/nav/account-<?= ($current_page == 'account.php') ? 'active' : 'inactive' ?>.svg" alt="Account">
