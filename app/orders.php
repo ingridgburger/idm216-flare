@@ -12,6 +12,7 @@
 <div class="app-shell">
     <header class="app-header header--tall header--red has-cart">
   <section class="header-icons">
+    <div></div>
     <a href="lunchbox.php" class="icon-btn cart-btn" aria-label="Lunchbox">
       <svg
         width="36"
@@ -47,14 +48,14 @@
             <h2 class="order-number">15947</h2>
             
             <div class="divider">
-                <img src="app-images/star.svg" alt="" class="divider-star-img">
+                <img src="app-images/misc/star.svg" alt="" class="divider-star-img">
             </div>
 
             <h3 class="pickup-time">pickup at 3:30 PM</h3>
             <p class="pickup-address">11 N 33rd St Philadelphia, PA 19104</p>
 
             <div class="divider">
-                <img src="app-images/star.svg" alt="" class="divider-star-img">
+                <img src="app-images/misc/star.svg" alt="" class="divider-star-img">
             </div>
 
             <div class="progress-tracker">
@@ -75,7 +76,7 @@
             </div>
 
             <div class="divider">
-                <img src="app-images/star.svg" alt="" class="divider-star-img">
+                <img src="app-images/misc/star.svg" alt="" class="divider-star-img">
             </div>
 
             <button class="view-details-btn">View Details</button>
