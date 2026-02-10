@@ -1,0 +1,46 @@
+.option-btn-group {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    margin: 0;
+}
+
+.option-btn-group::-webkit-scrollbar {
+    display: none;
+}
+
+.option-btn, .option--selected {
+    all: unset;
+    font-family: var(--font-sans-serif);
+    background-color: transparent;
+    border: 1px solid var(--white);
+    padding: 8px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.option--selected {
+    font-weight: 700;
+    border-color: var(--highlight-2);
+    background-color: var(--highlight-2);
+    color: var(--white);
+}
+
+.total-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    padding: 0;
+}
+
+.total-details p {
+    margin: 0;
+}
+
+.total-details span.price, .total-details h4 {
+    font-family: var(--font-sans-serif);
+    font-size: 1.25rem;
+    margin: 12px 0;
+}

@@ -17,7 +17,7 @@
   --highlight-2: var(--blue);
 
   --font-script: "eldwin-script", Helvetica, Arial, sans-serif;
-  --font-sans-serif: "Futura", Helvetica, Arial, sans-serif;
+  --font-sans-serif: "futura-pt", Helvetica, Arial, sans-serif;
 
   --font-small: clamp(0.75rem, 1vw + 0.8rem, 0.875rem);
   --font-base: clamp(1rem, 1vw + 0.9rem, 1rem);
@@ -32,7 +32,8 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -40,7 +41,7 @@ body {
   background-color: var(--background-color);
   color: var(--foreground-color);
   margin: 0;
-  overflow-x: hidden;
+  padding: 0;
 }
 
 /* HEADER */
@@ -48,6 +49,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
   background: rgba(255, 254, 251, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -298,11 +300,10 @@ section.hero {
 /* MAIN */
 main {
   font-family: var(--font-sans-serif);
-  height: 100%;
   padding: 0 var(--rhythm);
+  padding-top: 80px;
   margin-bottom: calc(var(--rhythm) * 2);
   max-width: 100%;
-  overflow-x: auto;
 }
 
 /* TABLE */

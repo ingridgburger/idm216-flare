@@ -1,0 +1,229 @@
+<?php
+require_once '../data/includes/db.php';
+
+if (!isset($_GET['id'])) {
+  die('Missing item ID');
+}
+
+$item_id = (int) $_GET['id'];
+
+$item_sql = "SELECT * FROM idm216_menu_items WHERE id = $item_id LIMIT 1";
+$item_result = mysqli_query($connection, $item_sql);
+$item = mysqli_fetch_assoc($item_result);
+
+if (!$item) {
+  die('Item not found');
+}
+
+$category_id = (int) $item['category_id'];
+
+$category_folders = [
+  1  => 'breakfast-sandwiches',
+  2  => 'breakfast-platters',
+  3  => 'pastries-and-sides',
+  4  => 'drinks',
+  5  => 'fresh-salads',
+  6  => 'lunch-sandwiches',
+  7  => 'hoagies',
+  8  => 'burgers-and-hot-sandwiches',
+  9  => 'club-sandwiches',
+  10 => 'cheesesteaks',
+  11 => 'gyros'
+];
+
+$category_folder = $category_folders[$category_id] ?? 'misc';
+
+$item_image = "app-images/menu-item-images/$category_folder/" .
+              htmlspecialchars($item['menu_item_image_filename']);
+
+$show_bagel    = in_array($category_id, [1]);
+$show_bread    = in_array($category_id, [6,7,8,9,10,11]);
+$show_cheese   = in_array($category_id, [1,6,7,8,9,10,11]);
+$show_dressing = in_array($category_id, [5]);
+$show_toppings = in_array($category_id, [1,5,6,7,8,9,10,11]);
+$show_size     = in_array($category_id, [4,5]);
+
+if ($show_bagel) {
+  $bagels = mysqli_query($connection, "SELECT * FROM idm216_bagel_options");
+}
+if ($show_bread) {
+  $breads = mysqli_query($connection, "SELECT * FROM idm216_bread_options");
+}
+if ($show_cheese) {
+  $cheeses = mysqli_query($connection, "SELECT * FROM idm216_cheese_options");
+}
+if ($show_dressing) {
+  $dressings = mysqli_query($connection, "SELECT * FROM idm216_dressing_options");
+}
+if ($show_toppings) {
+  $toppings = mysqli_query($connection, "SELECT * FROM idm216_topping_options");
+}
+if ($show_size) {
+  $sizes = mysqli_query($connection, "SELECT * FROM idm216_size_options");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><?= htmlspecialchars($item['item_name']) ?></title>
+
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/item.css">
+</head>
+
+<body>
+<div class="app-shell">
+
+
+<?php include 'includes/header-w-logo.php'; ?>
+
+<main class="container">
+
+
+<section class="item-header">
+  <img src="<?= $item_image ?>" alt="<?= htmlspecialchars($item['item_name']) ?>">
+
+  <h2 class="item-name"><?= htmlspecialchars($item['item_name']) ?></h2>
+  <p><?= htmlspecialchars($item['description']) ?></p>
+
+  <p>
+    <strong>$<?= number_format($item['base_price'], 2) ?></strong>
+    · <?= (int) $item['calories'] ?> cal
+  </p>
+
+  <div class="divider">
+    <img src="app-images/misc/star.svg" alt="" class="divider-star-img">
+  </div>
+</section>
+
+
+<?php if ($show_size): ?>
+<section class="selector">
+  <h4>Size</h4>
+  <?php while ($size = mysqli_fetch_assoc($sizes)): ?>
+    <label class="option">
+      <input type="radio" name="size">
+      <div class="option-info">
+        <span class="option-name"><?= htmlspecialchars($size['size_type']) ?></span>
+        <span class="option-meta"><?= $size['calories'] ?> cal</span>
+      </div>
+      <span class="checkmark"></span>
+    </label>
+  <?php endwhile; ?>
+</section>
+<?php endif; ?>
+
+
+<?php if ($show_bagel): ?>
+<section class="selector">
+  <h4>Bagel</h4>
+  <?php while ($bagel = mysqli_fetch_assoc($bagels)): ?>
+    <label class="option">
+      <input type="radio" name="bagel">
+      <img src="app-images/bagel-options/<?= $bagel['bagel_type_image_filename'] ?>">
+      <div class="option-info">
+        <span class="option-name"><?= htmlspecialchars($bagel['bagel_type']) ?></span>
+        <span class="option-meta"><?= $bagel['calories'] ?> cal</span>
+      </div>
+      <span class="checkmark"></span>
+    </label>
+  <?php endwhile; ?>
+</section>
+<?php endif; ?>
+
+
+<?php if ($show_bread): ?>
+<section class="selector">
+  <h4>Bread</h4>
+  <?php while ($bread = mysqli_fetch_assoc($breads)): ?>
+    <label class="option">
+      <input type="radio" name="bread">
+      <img src="app-images/bread-options/<?= $bread['bread_type_image_filename'] ?>">
+      <div class="option-info">
+        <span class="option-name"><?= htmlspecialchars($bread['bread_type']) ?></span>
+        <span class="option-meta"><?= $bread['calories'] ?> cal</span>
+      </div>
+      <span class="checkmark"></span>
+    </label>
+  <?php endwhile; ?>
+</section>
+<?php endif; ?>
+
+
+<?php if ($show_cheese): ?>
+<section class="selector">
+  <h4>Cheese</h4>
+  <?php while ($cheese = mysqli_fetch_assoc($cheeses)): ?>
+    <label class="option">
+      <input type="radio" name="cheese">
+      <img src="app-images/cheese-options/<?= $cheese['cheese_type_image_filename'] ?>">
+      <div class="option-info">
+        <span class="option-name"><?= htmlspecialchars($cheese['cheese_type']) ?></span>
+        <span class="option-meta"><?= $cheese['calories'] ?> cal</span>
+      </div>
+      <span class="checkmark"></span>
+    </label>
+  <?php endwhile; ?>
+</section>
+<?php endif; ?>
+
+
+<?php if ($show_toppings): ?>
+<section class="selector">
+  <h4>Toppings</h4>
+  <?php while ($topping = mysqli_fetch_assoc($toppings)): ?>
+    <label class="option">
+      <input type="checkbox" name="toppings[]">
+      <img src="app-images/topping-options/<?= $topping['topping_type_image_filename'] ?>">
+      <div class="option-info">
+        <span class="option-name">
+          <?= htmlspecialchars($topping['topping_type']) ?>
+          <?php if ($topping['extra_charge'] > 0): ?>
+            (+<?= number_format($topping['extra_charge'], 2) ?>)
+          <?php endif; ?>
+        </span>
+        <span class="option-meta"><?= $topping['calories'] ?> cal</span>
+      </div>
+      <span class="checkmark"></span>
+    </label>
+  <?php endwhile; ?>
+</section>
+<?php endif; ?>
+
+
+<?php if ($show_dressing): ?>
+<section class="selector">
+  <h4>Dressing</h4>
+  <?php while ($dressing = mysqli_fetch_assoc($dressings)): ?>
+    <label class="option">
+      <input type="checkbox" name="dressings[]">
+      <img src="app-images/dressing-options/<?= $dressing['dressing_type_image_filename'] ?>">
+      <div class="option-info">
+        <span class="option-name"><?= htmlspecialchars($dressing['dressing_name']) ?></span>
+        <span class="option-meta"><?= $dressing['calories'] ?> cal</span>
+      </div>
+      <span class="checkmark"></span>
+    </label>
+  <?php endwhile; ?>
+</section>
+<?php endif; ?>
+
+
+<div class="add-bar">
+  <div class="qty-selector">
+    <button class="qty-btn minus">−</button>
+    <span class="qty">1</span>
+    <button class="qty-btn plus">+</button>
+  </div>
+  <button id="addBtn" disabled>Add to Lunchbox</button>
+</div>
+
+</main>
+</div>
+
+<script src="js/item-page.js"></script>
+</body>
+</html>

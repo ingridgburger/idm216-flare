@@ -1,5 +1,27 @@
 /* FONT */
-@import url("https://use.typekit.net/fet1nlq.css");
+@font-face {
+	font-display: swap;
+	font-family: 'Eldwin';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/eldwin/eldwin-bold.otf') format('truetype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Futura';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/futura/futura-light.woff') format('truetype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Futura';
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/futura/futura-heavy.woff') format('truetype');
+}
 
 /* GENERAL */
 :root {
@@ -29,7 +51,6 @@ body {
   color: var(--foreground-color);
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 html {
@@ -122,8 +143,8 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
-  text-transform: uppercase;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .script {

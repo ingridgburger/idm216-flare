@@ -64,8 +64,8 @@ h4 {
 
 p,
 li {
-  font-size: var(--font-base);
-  font-weight: 300;
+  font-size: 1.25rem;
+  font-weight: 500;
   white-space: normal;
 }
 
