@@ -108,6 +108,5 @@ strong {
     margin: 0 auto;
     background: var(--background-color);
     overflow-x: hidden;
-    position: relative;
     padding-bottom: 80px;
 }

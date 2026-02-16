@@ -211,17 +211,22 @@ if ($show_size) {
 </section>
 <?php endif; ?>
 
+</main>
+</div>
+
+<div class="add-toast hidden" id="addToast">
+  <span class="toast-text">Added to Lunchbox</span>
+  <a href="lunchbox.php" class="toast-action">View</a>
+</div>
 
 <div class="add-bar">
   <div class="qty-selector">
     <button class="qty-btn minus">−</button>
-    <span class="qty">1</span>
+    <span class="qty" id="qtyValue">1</span>
     <button class="qty-btn plus">+</button>
   </div>
-  <button id="addBtn" disabled>Add to Lunchbox</button>
-</div>
+  <button id="addBtn" class="add-btn">Add to Lunchbox</button>
 
-</main>
 </div>
 
 <script src="js/item-page.js"></script>

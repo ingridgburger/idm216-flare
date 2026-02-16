@@ -68,7 +68,7 @@
             Nothing here yet.
         </h4>
         <p class="cart-empty-submessage" style="text-align: center; margin-bottom: 36px;">
-            Add something delicious to your lunchbox and we’ll get cooking!
+            Add something delicious to your lunchbox and we'll get cooking!
         </p>
     </section>
     <section class="cart-section">
@@ -179,5 +179,7 @@
 </nav>
 
 </div>
+
+<script src="js/checkout.js"></script>
 </body>
 </html>
