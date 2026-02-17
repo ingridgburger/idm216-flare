@@ -130,12 +130,12 @@
 
         <div class="total-details">
             <p>Tip</p>
-            <p>$1.50</p>
+            <p>$0.50</p>
         </div>
 
         <div class="total-details">
             <h4>Total</h4>
-            <span class="price">$8.00</span>
+            <span class="price">$7.00</span>
         </div>
     </section>
 </main>
