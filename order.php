@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pete's Little Lunch Box | Main Menu Items</title>
+    <title>Pete's Little Lunch Box | Main Menu Ordering</title>
     <link rel="icon" type="image/svg+xml" href="./images/flare-logos/favicon.png">
     <link rel="stylesheet" href="css/main-menu.css">
     <link rel="stylesheet" href="css/stylesheet.css">
@@ -49,7 +49,7 @@
 <main>
      <section class="hero">
             <img src="./images/petes-logos/petes-logo.svg" alt="Pete's Little Lunch Box Logo" class="petes-logo">
-            <h1 class="page-title">Main Menu Items</h1>
+            <h1 class="page-title">Main Menu Ordering</h1>
         </section>
     <article class="content" id="top">
         <table>
