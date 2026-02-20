@@ -32,16 +32,18 @@ $result = mysqli_query($connection, $query);
 
     <section class="active-order" id="activeOrder" style="display: none;">
         <h4>Active Orders</h4>
-        <div class="order-card">
-            <span class="order-status">Received</span>
-            <div>
-            <strong>Order #15947</strong>
-            <p>pickup 3:30 pm</p>
+        <a href="orders.php" class="order-link-card">
+            <div class="order-card">
+                <span class="order-status">Received</span>
+                <div>
+                <strong>Order #15947</strong>
+                <p>pickup 3:30 pm</p>
+                </div>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
+        </a>
     </section>
 
     <div class="divider">

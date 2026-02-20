@@ -54,6 +54,17 @@
 }
 
 /* ACTIVE ORDER */
+.order-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.order-card strong,
+.order-card p {
+  display: block;
+}
+
 .active-order {
   padding: 24px 20px;
   position: relative;
